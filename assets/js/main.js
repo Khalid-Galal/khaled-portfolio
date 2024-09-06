@@ -264,5 +264,50 @@
         document.getElementById('form-message').style.color = 'red';
     });
   });
+  document.addEventListener("DOMContentLoaded", function() {
+    const portfolioItems = [
+        { id: 1, title: "Lorem ipsum ", category: "Web Design", date: "18 Sep. 2018", imageUrl: "assets/img/portfolio/app-1.jpg" },
+        { id: 2, title: "Sed do eiusmod", category: "Graphic Design", date: "22 Oct. 2019", imageUrl: "assets/img/portfolio/app-2.jpg" },
+        { id: 3, title: "Tempor incididunt", category: "App Development", date: "15 Dec. 2020", imageUrl: "assets/img/portfolio/app-3.jpg" },
+        { id: 4, title: "Lorem ipsum ", category: "Web Design", date: "18 Sep. 2018", imageUrl: "assets/img/portfolio/app-1.jpg" },
+        { id: 5, title: "Sed do eiusmod", category: "Graphic Design", date: "22 Oct. 2019", imageUrl: "assets/img/portfolio/app-2.jpg" },
+        { id: 6, title: "Tempor incididunt", category: "App Development", date: "15 Dec. 2020", imageUrl: "assets/img/portfolio/app-3.jpg" },
 
+        // Add more items as needed
+    ];
+
+    const container = document.getElementById("portfolioContainer");
+    container.innerHTML = ''; // Clear the container before populating
+
+    portfolioItems.forEach(item => {
+        container.innerHTML += `
+            <div class="col-md-4 mb-5">
+                <div class="PORTFOLIO-content bg-white">
+                    <button type="button" class="border-0 p-0 m-0" data-bs-toggle="modal" data-bs-target="#exampleModal${item.id}">
+                        <div class="hover01 column">
+                            <div>
+                                <figure><img src="${item.imageUrl}" alt="Portfolio Image ${item.id}"></figure>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade" id="exampleModal${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel${item.id}" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img class="img-fluid" src="${item.imageUrl}" alt="Detailed Image ${item.id}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-inline-block w-50 me-5">
+                        <h3 class="py-2 ms-3" style="font-size: 19px;">${item.title}</h3>
+                        <h3 class="pb-4 ms-3" style="font-size: 13px; color: #4e4e4e;">
+                            <span style="color: blue;">${item.category}</span> / ${item.date}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+  });
 })();

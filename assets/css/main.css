@@ -959,105 +959,70 @@ section,
   font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
-
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
+/* Resetting and General Box-Sizing */
+* {
   padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+}
+.portfolio-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area without distorting the aspect ratio */
 }
 
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
+/* Styles for the Portfolio Section */
+.portfolio-content {  min-height: 320px; /* Adjust based on typical content size */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This helps distribute space inside the container if items vary in content size */
+  background-color: white;
+}
+
+.hover01 figure img {
+  transform: scale(1);
+  transition: transform 0.8s ease;
+  width: 100%;
+}
+
+.hover01 figure:hover img {
+  transform: scale(1.3);
+}
+
+figure {
+  margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 10px;
-  line-height: 1;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  background: #fff;
+  background-size: cover;
+  overflow: hidden;
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+.portfolio-content i {
+  color: #0279ff;
+  font-size: 1.9rem;
+  box-sizing: border-box;
+  padding: 4px 4px;
 }
 
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
+.border-icon {
+  margin-left: 25%;
+  margin-bottom: 2%;
+  border: #0279ff solid 3px;
+  border-radius: 50%;
 }
 
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
+/* Modal Image Styles */
+.modal-content img {
+  width: 100%; /* Ensure it's always full width */
 }
 
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
-
-.portfolio .portfolio-item {
+.modal-body {
   position: relative;
+  padding: unset;
 }
-
-.portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 0;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: color-mix(in srgb, var(--background-color), transparent 10%);
-  padding: 15px;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  font-weight: 600;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  transition: 0.3s;
-  line-height: 0;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 14px;
-  font-size: 28px;
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 20px;
-}
-
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
