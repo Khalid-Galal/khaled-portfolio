@@ -266,12 +266,12 @@
   });
   document.addEventListener("DOMContentLoaded", function() {
     const portfolioItems = [
-        { id: 1, title: "Lorem ipsum ", category: "Web Design", date: "18 Sep. 2018", imageUrl: "assets/img/portfolio/app-1.jpg" },
-        { id: 2, title: "Sed do eiusmod", category: "Graphic Design", date: "22 Oct. 2019", imageUrl: "assets/img/portfolio/app-2.jpg" },
-        { id: 3, title: "Tempor incididunt", category: "App Development", date: "15 Dec. 2020", imageUrl: "assets/img/portfolio/app-3.jpg" },
-        { id: 4, title: "Lorem ipsum ", category: "Web Design", date: "18 Sep. 2018", imageUrl: "assets/img/portfolio/app-1.jpg" },
-        { id: 5, title: "Sed do eiusmod", category: "Graphic Design", date: "22 Oct. 2019", imageUrl: "assets/img/portfolio/app-2.jpg" },
-        { id: 6, title: "Tempor incididunt", category: "App Development", date: "15 Dec. 2020", imageUrl: "assets/img/portfolio/app-3.jpg" },
+      { id: 1, title: "SoapUI Integration", category: "Integration", date: "Aug. 2023", imageUrl: "assets/img/portfolio/soapApi.png", url: "https://github.com/Khalid-Galal/SoapUI-Integration-for-Phone-Number-Validation-and-SMS-Sending" },
+      { id: 2, title: "OCR Invoice Analyst", category: "Automation", date: "Jul. 2021", imageUrl: "assets/img/portfolio/rpa.jpg", url: "https://github.com/Khalid-Galal/OCR-Invoice-Analyst" },
+      { id: 3, title: "Student System", category: "Backend Development", date: "15 Dec. 2020", imageUrl: "assets/img/portfolio/Student.jpg", url: "https://github.com/Khalid-Galal/student-management-system" },
+      { id: 4, title: "N Puzzle game", category: "Algorithms", date: "Sep. 2020", imageUrl: "assets/img/portfolio/algo.jpg", url: "https://github.com/Khalid-Galal/N-Puzzle-game" },
+      { id: 5, title: "House Pricing Detection", category: "Analytics", date: "Oct. 2022", imageUrl: "assets/img/portfolio/house.jpg", url: "https://github.com/Khalid-Galal/Predicting-Housing-Price" },
+      { id: 6, title: "Black Jack game", category: "Java Development", date: "Jul. 2019", imageUrl: "assets/img/portfolio/card.jpg", url: "https://github.com/Khalid-Galal/Black-jack-Game" },
 
         // Add more items as needed
     ];
@@ -281,33 +281,40 @@
 
     portfolioItems.forEach(item => {
         container.innerHTML += `
-            <div class="col-md-4 mb-5">
-                <div class="PORTFOLIO-content bg-white">
-                    <button type="button" class="border-0 p-0 m-0" data-bs-toggle="modal" data-bs-target="#exampleModal${item.id}">
-                        <div class="hover01 column">
-                            <div>
-                                <figure><img src="${item.imageUrl}" alt="Portfolio Image ${item.id}"></figure>
-                            </div>
-                        </div>
-                    </button>
-                    <div class="modal fade" id="exampleModal${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel${item.id}" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img class="img-fluid" src="${item.imageUrl}" alt="Detailed Image ${item.id}">
-                                </div>
-                            </div>
+        <div class="col-md-4 mb-5">
+          <a href="${item.url}" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="PORTFOLIO-content bg-white">
+                    <div class="hover01 column">
+                        <div>
+                            <figure><img src="${item.imageUrl}" alt="Portfolio Image ${item.id}"></figure>
                         </div>
                     </div>
-                    <div class="d-inline-block w-50 me-5">
-                        <h3 class="py-2 ms-3" style="font-size: 19px;">${item.title}</h3>
-                        <h3 class="pb-4 ms-3" style="font-size: 13px; color: #4e4e4e;">
-                            <span style="color: blue;">${item.category}</span> / ${item.date}
-                        </h3>
+                <div class="modal fade" id="exampleModal${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel${item.id}" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img class="img-fluid" src="${item.imageUrl}" alt="Detailed Image ${item.id}">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Updated part -->
+                <div class="d-flex flex-column align-items-start w-100 p-3" style="padding-bottom: 15px;">
+                    <h3 class="mb-2" style="font-size: 19px;">
+                        <a href="${item.url}" target="_blank" style="text-decoration: none; color: inherit;">
+                            ${item.title}
+                        </a>
+                    </h3>
+                    <h3 style="font-size: 13px; color: #4e4e4e; margin-bottom: 10px;">
+                        <span style="color: blue;">${item.category}</span> / ${item.date}
+                    </h3>
+                </div>
             </div>
-        `;
+          </a>
+
+        </div>
+                `;
     });
-  });
+});
+
 })();
