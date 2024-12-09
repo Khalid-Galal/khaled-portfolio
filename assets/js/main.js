@@ -266,13 +266,60 @@
   });
   document.addEventListener("DOMContentLoaded", function() {
     const portfolioItems = [
-      { id: 1, title: "SoapUI Integration", category: "Integration", date: "Aug. 2023", imageUrl: "assets/img/portfolio/soapApi.png", url: "https://github.com/Khalid-Galal/SoapUI-Integration-for-Phone-Number-Validation-and-SMS-Sending" },
-      { id: 2, title: "OCR Invoice Analyst", category: "Automation", date: "Jul. 2021", imageUrl: "assets/img/portfolio/rpa.jpg", url: "https://github.com/Khalid-Galal/OCR-Invoice-Analyst" },
-      { id: 3, title: "Student System", category: "Backend Development", date: "15 Dec. 2020", imageUrl: "assets/img/portfolio/Student.jpg", url: "https://github.com/Khalid-Galal/student-management-system" },
-      { id: 4, title: "N Puzzle game", category: "Algorithms", date: "Sep. 2020", imageUrl: "assets/img/portfolio/algo.jpg", url: "https://github.com/Khalid-Galal/N-Puzzle-game" },
-      { id: 5, title: "House Pricing Detection", category: "Analytics", date: "Oct. 2022", imageUrl: "assets/img/portfolio/house.jpg", url: "https://github.com/Khalid-Galal/Predicting-Housing-Price" },
-      { id: 6, title: "Black Jack game", category: "Java Development", date: "Jul. 2019", imageUrl: "assets/img/portfolio/card.jpg", url: "https://github.com/Khalid-Galal/Black-jack-Game" },
-
+        {
+            id: 1,
+            title: "SoapUI Integration",
+            category: "Integration",
+            date: "Aug. 2023",
+            imageUrl: "assets/img/portfolio/soapApi.jpg",
+            url: "https://github.com/Khalid-Galal/SoapUI-Integration-for-Phone-Number-Validation-and-SMS-Sending",
+            description: "Integrates a Java backend with SoapUI to validate phone numbers and simulate SMS delivery."
+        },
+        {
+            id: 2,
+            title: "OCR Invoice Analyst",
+            category: "Automation",
+            date: "Jul. 2021",
+            imageUrl: "assets/img/portfolio/rpa.jpg",
+            url: "https://github.com/Khalid-Galal/OCR-Invoice-Analyst",
+            description: "Utilizes UiPath's OCR capabilities to extract data from image-based invoices."
+        },
+        {
+            id: 3,
+            title: "Student System",
+            category: "Backend Development",
+            date: "15 Dec. 2020",
+            imageUrl: "assets/img/portfolio/Student.jpg",
+            url: "https://github.com/Khalid-Galal/student-management-system",
+            description: "A Spring Boot-based system offering CRUD operations for managing student records efficiently."
+        },
+        {
+            id: 4,
+            title: "N Puzzle Game",
+            category: "Algorithms",
+            date: "Sep. 2020",
+            imageUrl: "assets/img/portfolio/algo.jpg",
+            url: "https://github.com/Khalid-Galal/N-Puzzle-game",
+            description: "C++ implementation of the N-Puzzle game solver using priority queues and vectors."
+        },
+        {
+            id: 5,
+            title: "House Pricing Detection",
+            category: "Analytics",
+            date: "Oct. 2022",
+            imageUrl: "assets/img/portfolio/house.jpg",
+            url: "https://github.com/Khalid-Galal/Predicting-Housing-Price",
+            description: "Analyzes and predicts house prices using various models for accurate property valuation."
+        },
+        {
+            id: 6,
+            title: "Black Jack Game",
+            category: "Java Development",
+            date: "Jul. 2019",
+            imageUrl: "assets/img/portfolio/card.jpg",
+            url: "https://github.com/Khalid-Galal/Black-jack-Game",
+            description: "Simulates the classic Black Jack card game, allowing players to compete against a dealer."
+        }
         // Add more items as needed
     ];
 
@@ -284,11 +331,11 @@
         <div class="col-md-4 mb-5">
           <a href="${item.url}" target="_blank" style="text-decoration: none; color: inherit;">
             <div class="PORTFOLIO-content bg-white">
-                    <div class="hover01 column">
-                        <div>
-                            <figure><img src="${item.imageUrl}" alt="Portfolio Image ${item.id}"></figure>
-                        </div>
+                <div class="hover01 column">
+                    <div>
+                        <figure><img src="${item.imageUrl}" alt="Portfolio Image ${item.id}"></figure>
                     </div>
+                </div>
                 <div class="modal fade" id="exampleModal${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel${item.id}" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -298,7 +345,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Updated part -->
                 <div class="d-flex flex-column align-items-start w-100 p-3" style="padding-bottom: 15px;">
                     <h3 class="mb-2" style="font-size: 19px;">
                         <a href="${item.url}" target="_blank" style="text-decoration: none; color: inherit;">
@@ -308,14 +354,16 @@
                     <h3 style="font-size: 13px; color: #4e4e4e; margin-bottom: 10px;">
                         <span style="color: blue;">${item.category}</span> / ${item.date}
                     </h3>
+                    <p style="font-size: 14px; color: #6c757d;">
+                        ${item.description}
+                    </p>
                 </div>
             </div>
           </a>
-
         </div>
-                `;
+        `;
     });
-    
 });
+
 
 })();
