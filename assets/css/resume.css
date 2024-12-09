@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-title p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .btn-primary {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: darkblue;
+  }
+  
+  .resume-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #444;
+  }
+  
+  .resume-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .resume-item h4 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .resume-item h5 {
+    font-size: 1rem;
+    color: #777;
+    margin: 0.5rem 0;
+  }
+  
+  .resume-item p {
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  .resume-item ul {
+    list-style: square;
+    margin-left: 20px;
+  }
+  
+  .resume-item ul li {
+    margin-bottom: 0.5rem;
+  }
+  
