@@ -76,4 +76,25 @@ body {
   .resume-item ul li {
     margin-bottom: 0.5rem;
   }
+  #downloadCVBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #downloadCVBtn:hover {
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+  }
   
