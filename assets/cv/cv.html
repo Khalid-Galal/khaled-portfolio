@@ -9,37 +9,36 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
-      line-height: 1.5;
-      padding: 40px 60px;
+      line-height: 1.4;
+      padding: 20px 40px;
       max-width: 900px;
       margin: 0 auto;
     }
     @media print {
-      body { padding: 20px 40px; }
-      .page-break { page-break-before: always; }
+      body { padding: 15px 35px; }
     }
 
     /* Header */
-    .header { text-align: center; margin-bottom: 20px; }
-    .header h1 { font-size: 28px; font-weight: 700; letter-spacing: 2px; margin-bottom: 2px; }
+    .header { text-align: center; margin-bottom: 12px; }
+    .header h1 { font-size: 26px; font-weight: 700; letter-spacing: 2px; margin-bottom: 2px; }
     .header .subtitle { font-size: 16px; color: #555; margin-bottom: 8px; }
     .header .contact { font-size: 12px; color: #555; }
     .header .contact a { color: #555; text-decoration: none; }
     .header .contact span { margin: 0 4px; }
 
     /* Section */
-    .section { margin-bottom: 18px; }
+    .section { margin-bottom: 10px; }
     .section-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       text-align: center;
       border-bottom: 1.5px solid #333;
-      padding-bottom: 4px;
-      margin-bottom: 12px;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
     }
 
     /* Experience / Education items */
-    .item { margin-bottom: 14px; }
+    .item { margin-bottom: 10px; }
     .item-header { display: flex; justify-content: space-between; align-items: baseline; }
     .item-header .company { font-size: 15px; font-weight: 600; }
     .item-header .location { font-size: 13px; color: #555; }
@@ -48,7 +47,7 @@
     .item-role .dates { font-size: 13px; color: #555; }
     .item-desc { font-size: 13px; color: #555; font-style: italic; margin: 2px 0 4px 0; }
     .item ul { margin-left: 20px; font-size: 13px; }
-    .item li { margin-bottom: 3px; }
+    .item li { margin-bottom: 1px; }
     .item li strong { font-weight: 700; }
 
     /* Summary */
@@ -64,12 +63,12 @@
     .strength-item p { font-size: 12px; color: #555; }
 
     /* Training */
-    .training-item { font-size: 13px; margin-bottom: 6px; }
+    .training-item { font-size: 12px; margin-bottom: 4px; }
     .training-item strong { font-weight: 700; }
     .training-item span { color: #555; }
 
     /* Projects */
-    .project { margin-bottom: 12px; }
+    .project { margin-bottom: 8px; }
     .project-header { display: flex; justify-content: space-between; align-items: baseline; }
     .project-header .project-name { font-size: 14px; font-weight: 700; text-decoration: underline; }
     .project-header .project-dates { font-size: 13px; color: #555; }
@@ -283,16 +282,11 @@
     </div>
   </div>
 
-  <!-- Certificates -->
+  <!-- Certificates & Training -->
   <div class="section">
-    <div class="section-title">Certificates</div>
+    <div class="section-title">Certificates & Training</div>
     <div class="training-item"><strong>Digital Egypt Pioneers Program — Vulnerability Analyst / Penetration Tester</strong> <span>&mdash; Ministry of Communications and Information Technology of Egypt (Infrastructure and Security). Nov 2024 - May 2025.</span></div>
     <div class="training-item"><strong>McKinsey.org Forward Program</strong> <span>&mdash; Practical skills for problem-solving, communication, adaptability, and building a digital toolkit. Dec 2025.</span></div>
-  </div>
-
-  <!-- Training / Courses -->
-  <div class="section">
-    <div class="section-title">Training / Courses</div>
     <div class="training-item"><strong>Spring Boot 3</strong> <span>&mdash; Course focused on the Spring Boot framework to enhance backend development skills.</span></div>
     <div class="training-item"><strong>Comprehensive Cybersecurity Bootcamp</strong> <span>&mdash; Intensive bootcamp covering various aspects of cybersecurity.</span></div>
     <div class="training-item"><strong>RPA Developer Foundation</strong> <span>&mdash; Foundation course for RPA Development focused on automation technologies.</span></div>
@@ -301,110 +295,6 @@
     <div class="training-item"><strong>Cybersecurity Fundamentals Workshop</strong> <span>&mdash; Workshop introducing fundamental concepts in cybersecurity.</span></div>
   </div>
 
-  <!-- Projects -->
-  <div class="section">
-    <div class="section-title">Projects</div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">Correspondence Management System</span>
-        <span class="project-dates">01/2025 - Present</span>
-      </div>
-      <p class="project-desc">Enterprise-grade CMS built as a modular monolith for digitizing and automating organizational correspondence.</p>
-      <ul>
-        <li>Spring Boot 4, Angular 21, PostgreSQL 16, Flowable workflow engine, Elasticsearch, Redis, and MinIO.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">Company RAG Agent</span>
-        <span class="project-dates">2025</span>
-      </div>
-      <p class="project-desc">Production-ready RAG backend for company document Q&A with session-based chat memory.</p>
-      <ul>
-        <li>Flask, PostgreSQL with pgvector, Google Generative AI embeddings, Docker.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">ECM Document Generator</span>
-        <span class="project-dates">2025</span>
-      </div>
-      <p class="project-desc">Full-stack application for automated ECM solution design document and XML configuration generation.</p>
-      <ul>
-        <li>Angular 18, Node.js/TypeScript, Google Gemini API, Docker.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">AI Solution Design Generator</span>
-        <span class="project-dates">2025</span>
-      </div>
-      <p class="project-desc">AI-powered tool that generates ECM solution design documents from analysis PDFs.</p>
-      <ul>
-        <li>Flask, LangChain, FAISS vector store, Google Gemini, python-docx.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">Bilingual Document Generator</span>
-        <span class="project-dates">2025</span>
-      </div>
-      <p class="project-desc">Desktop application for generating bilingual (Arabic/English) financial proposals as Word documents.</p>
-      <ul>
-        <li>Python, Tkinter, python-docx, JSON-based templates with RTL/LTR support.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">Log Filtering System</span>
-        <span class="project-dates">2025</span>
-      </div>
-      <p class="project-desc">Multi-layer log filtering system for isolating relevant entries from enterprise application logs.</p>
-      <ul>
-        <li>TypeScript, Node.js, three-layer filtering with time-window analysis and ID-based correlation.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">SoapUI Integration</span>
-        <span class="project-dates">07/2024 - 08/2024</span>
-      </div>
-      <p class="project-desc">Integration of a Java backend with SoapUI for phone number validation and SMS simulation.</p>
-      <ul>
-        <li>Java, SoapUI, REST API integration.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">OCR Invoice Analyst</span>
-        <span class="project-dates">07/2022 - 09/2022</span>
-      </div>
-      <p class="project-desc">Utilizes UiPath's OCR capabilities to extract data from image-based invoices.</p>
-      <ul>
-        <li>UiPath Studio, OCR, RPA automation.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-name">N-Puzzle Game</span>
-        <span class="project-dates">04/2022 - 06/2022</span>
-      </div>
-      <p class="project-desc">C++ implementation of an N-Puzzle game solver using priority queues and custom data structures.</p>
-      <ul>
-        <li>C++, algorithms, priority queue, dynamic memory management.</li>
-      </ul>
-    </div>
-
-  </div>
 
 </body>
 </html>
