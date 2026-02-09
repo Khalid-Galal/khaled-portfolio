@@ -320,7 +320,6 @@
             url: "https://github.com/Khalid-Galal/Black-jack-Game",
             description: "Simulates the classic Black Jack card game, allowing players to compete against a dealer."
         }
-        // Add more items as needed
     ];
 
     const container = document.getElementById("portfolioContainer");
