@@ -28,12 +28,33 @@
 </head>
 <body>
 
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Khaled</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
   <!-- Resume Section -->
   <section id="resume" class="resume section">
     <!-- Section Title -->
     <div class="container section-title">
       <h2>Resume</h2>
-      <p>A snapshot of my education and professional journey in development.</p>
+      <p>Education, certifications, and professional experience in software engineering and AI.</p>
       <!-- Download CV Button -->
       <a id="downloadCVBtn" href="assets/cv/Software Engineer - Khaled Galal - CV.pdf" download class="btn btn-primary">
         <i class="fas fa-download"></i> Download PDF
@@ -50,16 +71,34 @@
           </div>
           <h3 class="resume-title">Education</h3>
           <div class="resume-item">
+            <h4>Master of Science in Software Engineering</h4>
+            <h5>Jun 2025 – Aug 2026</h5>
+            <p><em>Quantic School of Business and Technology, Washington, DC (Online)</em></p>
+            <p>DEAC-accredited program focused on AI-driven software engineering, system design, and modern development practices.</p>
+          </div>
+          <div class="resume-item">
             <h4>Bachelor of Computer and Information Science</h4>
             <h5>2019 - 2023</h5>
             <p><em>Ain Shams University, Cairo, Egypt</em></p>
-            <p>Completed several projects using various technologies including DBMS, Java, and React.js.</p>
             <p><strong>Graduation Project: Driver Behavior Detection System</strong></p>
             <ul>
               <li>Developed using Python with machine learning models like MobileNet, VGG16, and VGG19.</li>
               <li>System detects and classifies 10 different driver behaviors such as drowsiness and inattention.</li>
               <li>Built a mobile application using Flutter and a backend server with Flask for real-time monitoring and alerts.</li>
             </ul>
+          </div>
+          <h3 class="resume-title">Certificates</h3>
+          <div class="resume-item">
+            <h4>Digital Egypt Pioneers Program — Vulnerability Analyst / Penetration Tester</h4>
+            <h5>Nov 2024 – May 2025</h5>
+            <p><em>Ministry of Communications and Information Technology of Egypt</em></p>
+            <p>Infrastructure and Security track covering vulnerability analysis and penetration testing.</p>
+          </div>
+          <div class="resume-item">
+            <h4>McKinsey.org Forward Program</h4>
+            <h5>Dec 2025</h5>
+            <p><em>McKinsey.org</em></p>
+            <p>Problem-solving, communication, adaptability, and building a foundational digital toolkit.</p>
           </div>
         </div>
 
@@ -68,13 +107,14 @@
           <div class="resume-item">
             <h4>Software Engineer, R&D AI Solutions | Intercom Enterprises</h4>
             <h5>Jan 2025 – Present</h5>
+            <p><em>Supported multiple teams across the company by building AI-powered tools and enterprise applications to automate and streamline their workflows.</em></p>
             <ul>
-              <li>Designed and developed the Correspondence Management System (CMS), an enterprise modular monolith using Spring Boot 4, Angular 21, PostgreSQL 16, and Flowable workflow engine.</li>
-              <li>Built a production-ready RAG Agent using Flask, PostgreSQL with pgvector, and Google Generative AI for company document Q&A with session-based chat memory.</li>
-              <li>Developed the ECM Document Generator, a full-stack application (Angular 18 + Node.js/TypeScript) integrating Google Gemini API for automated solution design document generation.</li>
-              <li>Created an AI-powered Solution Design Document generator using Flask, LangChain, and FAISS-based RAG pipeline for ECM implementations.</li>
-              <li>Built a bilingual (Arabic/English) document generator desktop application with Python and Tkinter for automated Word document creation.</li>
-              <li>Developed a multi-layer log filtering system in TypeScript for isolating relevant entries from enterprise application logs.</li>
+              <li><strong>Company-wide:</strong> Designed and developed the Correspondence Management System (CMS), an enterprise modular monolith using Spring Boot 4, Angular 21, PostgreSQL 16, and Flowable workflow engine.</li>
+              <li><strong>Company-wide:</strong> Built a production-ready RAG Agent using Flask, PostgreSQL with pgvector, and Google Generative AI, enabling employees to query company documents such as policies and internal guidelines through a conversational interface.</li>
+              <li><strong>ECM/FileNet & ECM/OpenText Teams:</strong> Developed the ECM Document Generator, a full-stack application (Angular 18 + Node.js/TypeScript) integrating Google Gemini API to automate the creation of technical proposals, taxonomy definitions, and subscription event configurations from analysis documents.</li>
+              <li><strong>ECM/FileNet & ECM/OpenText Teams:</strong> Created an AI-powered Solution Design Document generator using Flask, LangChain, and FAISS-based RAG pipeline to automate ECM solution design from analysis documents.</li>
+              <li><strong>Financial Team:</strong> Built a bilingual (Arabic/English) document generator desktop application with Python and Tkinter to automate the generation of financial proposals.</li>
+              <li><strong>Support Team:</strong> Developed a multi-layer log filtering system in TypeScript to help first-layer support engineers investigate issues by isolating relevant entries from bank-submitted logs.</li>
             </ul>
           </div>
           <div class="resume-item">
