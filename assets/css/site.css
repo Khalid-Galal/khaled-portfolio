@@ -51,7 +51,7 @@ header {
   border-bottom: 1px solid var(--line);
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -.02em; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -.02em; white-space: nowrap; }
 .brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
 .nav-links { display: flex; gap: 4px; }
 .nav-links a {
@@ -227,9 +227,16 @@ footer { border-top: 1px solid var(--line); padding: 34px 0; }
 }
 .socials a:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ---------- reveal ---------- */
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
-.reveal.in { opacity: 1; transform: none; }
+/* ---------- reveal ----------
+   Gated on (scripting: enabled): without the gate, a script that never runs
+   (blocked, failed, or an error earlier in site.js) leaves every section
+   permanently at opacity 0 and the page reads as blank. Browsers without the
+   media feature ignore the block, which also fails safe — content visible,
+   just unanimated. Keep the reduced-motion override after this block. */
+@media (scripting: enabled) {
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+}
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 
 /* ---------- responsive ---------- */
@@ -251,4 +258,14 @@ footer { border-top: 1px solid var(--line); padding: 34px 0; }
   .hero { padding: 60px 0 44px; }
   .work-grid { grid-template-columns: 1fr; }
   .cv-head { padding: 48px 0 32px; }
+}
+
+/* Phone header: brand + 3 controls do not fit at 360px and under, which
+   wrapped "Khaled Galal" onto two lines inside a fixed 66px bar. */
+@media (max-width: 430px) {
+  .wrap { padding: 0 18px; }
+  .nav-right { gap: 6px; }
+  .nav-right .btn { padding: 10px 14px; }
+  .btn-icon { width: 36px; height: 36px; padding: 8px; }
+  .btn-label { display: none; }
 }

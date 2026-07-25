@@ -1,12 +1,20 @@
 // Shared behaviour for index.html and resume.html: theme, mobile nav, scroll reveal, scrollspy.
 (() => {
   // ---- theme ----
+  // localStorage throws a SecurityError when site data is blocked (Safari
+  // private mode, "block all cookies"). Unguarded, that kills this whole IIFE
+  // and nothing below — including the reveals — ever runs.
+  const store = {
+    get: k => { try { return localStorage.getItem(k); } catch { return null; } },
+    set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* ignore */ } },
+  };
+
   const root = document.documentElement;
-  root.dataset.theme = localStorage.getItem('theme') || 'dark';
+  root.dataset.theme = store.get('theme') || 'dark';
   const themeBtn = document.getElementById('themeToggle');
   if (themeBtn) themeBtn.onclick = () => {
     root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', root.dataset.theme);
+    store.set('theme', root.dataset.theme);
   };
 
   // ---- mobile nav ----
