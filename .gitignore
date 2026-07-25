@@ -1,3 +1,7 @@
 node_modules/
 test-results/
 playwright-report/
+
+# Internal Intercom Enterprises system notes — marked "Internal Use Only" and
+# reference named banking clients. This repo is public (GitHub Pages).
+projects/

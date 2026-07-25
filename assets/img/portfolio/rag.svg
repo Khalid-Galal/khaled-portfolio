@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="ragBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121724"/>
+      <stop offset="1" stop-color="#0a0d14"/>
+    </linearGradient>
+    <radialGradient id="ragGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ragGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#161c28" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#ragBg)"/>
+  <rect width="640" height="400" fill="url(#ragGrid)"/>
+  <ellipse cx="300" cy="200" rx="280" ry="180" fill="url(#ragGlow)"/>
+
+  <!-- vector space -->
+  <rect x="40" y="92" width="232" height="216" rx="14" fill="#151b28" stroke="#2a3345" stroke-width="2"/>
+  <circle cx="150" cy="196" r="58" fill="none" stroke="#a78bfa" stroke-opacity=".3" stroke-width="2" stroke-dasharray="6 6"/>
+  <g fill="#33405a">
+    <circle cx="72" cy="126" r="5"/>
+    <circle cx="102" cy="290" r="5"/>
+    <circle cx="216" cy="132" r="5"/>
+    <circle cx="242" cy="212" r="5"/>
+    <circle cx="228" cy="272" r="5"/>
+    <circle cx="66" cy="228" r="5"/>
+    <circle cx="176" cy="290" r="5"/>
+    <circle cx="196" cy="106" r="5"/>
+    <circle cx="86" cy="170" r="5"/>
+    <circle cx="252" cy="164" r="5"/>
+    <circle cx="120" cy="120" r="5"/>
+    <circle cx="60" cy="270" r="5"/>
+  </g>
+  <g fill="none" stroke="#a78bfa" stroke-opacity=".55" stroke-width="2">
+    <path d="M150 196l-38-32M150 196l38-24M150 196l-16 42"/>
+  </g>
+  <g fill="#a78bfa" fill-opacity=".85">
+    <circle cx="112" cy="164" r="7"/>
+    <circle cx="188" cy="172" r="7"/>
+    <circle cx="134" cy="238" r="7"/>
+  </g>
+  <circle cx="150" cy="196" r="10" fill="#a78bfa"/>
+
+  <path d="M282 200h24" fill="none" stroke="#2a3345" stroke-width="2.5"/>
+  <path d="M-9-7L0 0-9 7" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(314 200)"/>
+
+  <!-- question -->
+  <rect x="396" y="100" width="196" height="56" rx="14" fill="#1d2534" stroke="#2f3a4e" stroke-width="2"/>
+  <rect x="416" y="116" width="140" height="9" rx="4" fill="#3a465c"/>
+  <rect x="416" y="134" width="96" height="9" rx="4" fill="#2f3a4e"/>
+
+  <!-- grounded answer -->
+  <rect x="330" y="176" width="262" height="122" rx="14" fill="#151b28" stroke="#a78bfa" stroke-width="2.5"/>
+  <g fill="#39435a">
+    <rect x="352" y="198" width="200" height="9" rx="4"/>
+    <rect x="352" y="218" width="180" height="9" rx="4"/>
+    <rect x="352" y="238" width="148" height="9" rx="4"/>
+  </g>
+  <g fill="#a78bfa" fill-opacity=".18" stroke="#a78bfa" stroke-opacity=".5" stroke-width="2">
+    <rect x="352" y="260" width="58" height="22" rx="11"/>
+    <rect x="418" y="260" width="58" height="22" rx="11"/>
+    <rect x="484" y="260" width="58" height="22" rx="11"/>
+  </g>
+</svg>

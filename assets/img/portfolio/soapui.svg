@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="soapBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121724"/>
+      <stop offset="1" stop-color="#0a0d14"/>
+    </linearGradient>
+    <radialGradient id="soapGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4d7cff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#4d7cff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="soapGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#161c28" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#soapBg)"/>
+  <rect width="640" height="400" fill="url(#soapGrid)"/>
+  <ellipse cx="320" cy="196" rx="260" ry="172" fill="url(#soapGlow)"/>
+
+  <text x="34" y="52" font-family="Consolas, ui-monospace, monospace" font-size="17" fill="#3c465e">&lt;soap:Envelope&gt;</text>
+  <text x="606" y="368" text-anchor="end" font-family="Consolas, ui-monospace, monospace" font-size="17" fill="#3c465e">200 OK</text>
+
+  <!-- request arc -->
+  <path d="M202 176C268 138 372 138 438 176" fill="none" stroke="#4d7cff" stroke-width="2.5" stroke-dasharray="8 8"/>
+  <path d="M-10-7L0 0-10 7" fill="none" stroke="#4d7cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(438 176) rotate(30)"/>
+
+  <!-- response arc -->
+  <path d="M438 224C372 262 268 262 202 224" fill="none" stroke="#2a3345" stroke-width="2.5"/>
+  <path d="M-10-7L0 0-10 7" fill="none" stroke="#3c465e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(202 224) rotate(210)"/>
+
+  <!-- left node: java api -->
+  <rect x="46" y="142" width="156" height="116" rx="16" fill="#151b28" stroke="#2a3345" stroke-width="2"/>
+  <rect x="70" y="164" width="108" height="20" rx="5" fill="#1d2534" stroke="#2f3a4e" stroke-width="2"/>
+  <rect x="70" y="192" width="108" height="20" rx="5" fill="#1d2534" stroke="#2f3a4e" stroke-width="2"/>
+  <circle cx="86" cy="174" r="4" fill="#4d7cff"/>
+  <circle cx="86" cy="202" r="4" fill="#33405a"/>
+  <text x="124" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" fill="#8894a8">Java API</text>
+
+  <!-- right node: sms gateway -->
+  <rect x="438" y="142" width="156" height="116" rx="16" fill="#151b28" stroke="#2a3345" stroke-width="2"/>
+  <path d="M470 158h92a8 8 0 0 1 8 8v30a8 8 0 0 1-8 8h-56l-18 16v-16h-18a8 8 0 0 1-8-8v-30a8 8 0 0 1 8-8z" fill="#1d2534" stroke="#2f3a4e" stroke-width="2"/>
+  <rect x="480" y="174" width="72" height="8" rx="4" fill="#33405a"/>
+  <rect x="480" y="190" width="48" height="8" rx="4" fill="#2a3345"/>
+  <text x="516" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" fill="#8894a8">SMS Gateway</text>
+
+  <!-- soap envelope in flight -->
+  <rect x="284" y="124" width="72" height="48" rx="9" fill="#151b28" stroke="#4d7cff" stroke-width="2.5"/>
+  <path d="M288 131l32 24 32-24" fill="none" stroke="#4d7cff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- validated -->
+  <circle cx="320" cy="252" r="18" fill="#151b28" stroke="#2a3345" stroke-width="2"/>
+  <path d="M312 252l6 6 11-13" fill="none" stroke="#4d7cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

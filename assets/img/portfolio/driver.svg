@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="dvBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121724"/>
+      <stop offset="1" stop-color="#0a0d14"/>
+    </linearGradient>
+    <radialGradient id="dvGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dvGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#161c28" stroke-width="1"/>
+    </pattern>
+    <clipPath id="dvClip"><rect x="36" y="86" width="272" height="212" rx="12"/></clipPath>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#dvBg)"/>
+  <rect width="640" height="400" fill="url(#dvGrid)"/>
+  <ellipse cx="300" cy="200" rx="280" ry="180" fill="url(#dvGlow)"/>
+
+  <!-- camera feed -->
+  <rect x="36" y="86" width="272" height="212" rx="12" fill="#151b28" stroke="#2a3345" stroke-width="2"/>
+  <g clip-path="url(#dvClip)" fill="#263041">
+    <circle cx="150" cy="178" r="36"/>
+    <path d="M88 300a62 62 0 0 1 124 0z"/>
+  </g>
+
+  <!-- detection brackets -->
+  <g fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round">
+    <path d="M100 148v-16h20M180 132h20v16M200 254v16h-20M120 270h-20v-16"/>
+  </g>
+  <rect x="100" y="100" width="96" height="22" rx="6" fill="#22d3ee" fill-opacity=".18" stroke="#22d3ee" stroke-opacity=".6" stroke-width="2"/>
+  <rect x="110" y="108" width="52" height="6" rx="3" fill="#22d3ee"/>
+
+  <path d="M318 192h14" fill="none" stroke="#2a3345" stroke-width="2.5"/>
+  <path d="M-9-7L0 0-9 7" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(340 192)"/>
+
+  <!-- class probabilities -->
+  <g fill="#263041">
+    <rect x="352" y="114" width="52" height="14" rx="7"/>
+    <rect x="352" y="178" width="74" height="14" rx="7"/>
+    <rect x="352" y="210" width="40" height="14" rx="7"/>
+    <rect x="352" y="242" width="60" height="14" rx="7"/>
+    <rect x="352" y="274" width="32" height="14" rx="7"/>
+  </g>
+  <rect x="352" y="146" width="118" height="14" rx="7" fill="#22d3ee"/>
+
+  <!-- alert on the flutter app -->
+  <rect x="496" y="104" width="108" height="180" rx="20" fill="#151b28" stroke="#22d3ee" stroke-width="2.5"/>
+  <rect x="532" y="114" width="36" height="6" rx="3" fill="#2a3345"/>
+  <path d="M550 142l20 34h-40z" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M550 154v10" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="550" cy="170" r="2" fill="#22d3ee"/>
+  <rect x="514" y="196" width="72" height="8" rx="4" fill="#39435a"/>
+  <rect x="514" y="212" width="52" height="8" rx="4" fill="#2a3345"/>
+  <rect x="514" y="242" width="72" height="22" rx="11" fill="#22d3ee" fill-opacity=".8"/>
+</svg>

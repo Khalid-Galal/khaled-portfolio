@@ -6,11 +6,11 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #005ecb; /* Accent color - toned down blue, easier on the eyes */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -22,7 +22,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #005ecb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -145,7 +145,7 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -160,7 +160,7 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 24px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
@@ -193,7 +193,7 @@ h6 {
 
   .navmenu>ul>li {
     white-space: nowrap;
-    padding: 15px 14px;
+    padding: 8px 14px;
   }
 
   .navmenu>ul>li:last-child {
@@ -439,7 +439,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding: 40px 0;
+  padding: 20px 0;
   position: relative;
 }
 
@@ -448,20 +448,20 @@ h6 {
 }
 
 .footer .social-links {
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 16px;
+  font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0 5px;
+  margin: 0 4px;
   transition: 0.3s;
 }
 
@@ -471,8 +471,8 @@ h6 {
 }
 
 .footer .credits {
-  margin-top: 10px;
-  font-size: 13px;
+  margin-top: 6px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -603,7 +603,7 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
-  scroll-margin-top: 92px;
+  scroll-margin-top: 60px;
   overflow: clip;
 }
 
@@ -611,7 +611,7 @@ section,
 
   section,
   .section {
-    scroll-margin-top: 76px;
+    scroll-margin-top: 56px;
   }
 }
 
@@ -654,7 +654,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: calc(100vh - 92px);
+  min-height: calc(100vh - 60px);
   position: relative;
   padding: 60px 0;
   display: flex;
@@ -967,7 +967,7 @@ section,
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* This helps distribute space inside the container if items vary in content size */
-  background-color: white;
+  background-color: var(--surface-color);
 }
 
 .hover01 figure img {
@@ -983,13 +983,13 @@ section,
 figure {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: var(--surface-color);
   background-size: cover;
   overflow: hidden;
 }
 
 .portfolio-content i {
-  color: #0279ff;
+  color: var(--accent-color);
   font-size: 1.9rem;
   box-sizing: border-box;
   padding: 4px 4px;
@@ -998,7 +998,7 @@ figure {
 .border-icon {
   margin-left: 25%;
   margin-bottom: 2%;
-  border: #0279ff solid 3px;
+  border: var(--accent-color) solid 3px;
   border-radius: 50%;
 }
 

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="cmsBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121724"/>
+      <stop offset="1" stop-color="#0a0d14"/>
+    </linearGradient>
+    <radialGradient id="cmsGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="cmsGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#161c28" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#cmsBg)"/>
+  <rect width="640" height="400" fill="url(#cmsGrid)"/>
+  <ellipse cx="320" cy="200" rx="280" ry="180" fill="url(#cmsGlow)"/>
+
+  <!-- inactive branch -->
+  <g fill="none" stroke="#2a3345" stroke-width="2.5">
+    <path d="M344 200h26v72h26M520 272h28v-72h6"/>
+  </g>
+  <!-- active path -->
+  <g fill="none" stroke="#2dd4bf" stroke-width="3">
+    <path d="M104 200h24M252 200h28M344 200h26v-72h26M520 128h28v72h6"/>
+  </g>
+
+  <!-- incoming correspondence -->
+  <rect x="44" y="178" width="60" height="44" rx="8" fill="#151b28" stroke="#2dd4bf" stroke-width="2.5"/>
+  <path d="M50 185l24 18 24-18" fill="none" stroke="#2dd4bf" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- task 1 -->
+  <rect x="128" y="168" width="124" height="64" rx="14" fill="#151b28" stroke="#2dd4bf" stroke-width="2.5"/>
+  <rect x="150" y="186" width="70" height="9" rx="4" fill="#2dd4bf" fill-opacity=".7"/>
+  <rect x="150" y="206" width="52" height="9" rx="4" fill="#26483f"/>
+
+  <!-- routing gateway -->
+  <path d="M312 168l32 32-32 32-32-32z" fill="#151b28" stroke="#2dd4bf" stroke-width="2.5"/>
+  <path d="M304 192l16 16m0-16l-16 16" fill="none" stroke="#2dd4bf" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- task 2 (taken) -->
+  <rect x="396" y="96" width="124" height="64" rx="14" fill="#151b28" stroke="#2dd4bf" stroke-width="2.5"/>
+  <rect x="418" y="114" width="70" height="9" rx="4" fill="#2dd4bf" fill-opacity=".7"/>
+  <rect x="418" y="134" width="46" height="9" rx="4" fill="#26483f"/>
+
+  <!-- task 3 (not taken) -->
+  <rect x="396" y="240" width="124" height="64" rx="14" fill="#151b28" stroke="#2a3345" stroke-width="2"/>
+  <rect x="418" y="258" width="70" height="9" rx="4" fill="#2a3345"/>
+  <rect x="418" y="278" width="46" height="9" rx="4" fill="#232b3a"/>
+
+  <!-- archived -->
+  <circle cx="576" cy="200" r="22" fill="#151b28" stroke="#2dd4bf" stroke-width="2.5"/>
+  <path d="M567 200l6 7 13-15" fill="none" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

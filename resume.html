@@ -1,204 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume - Khaled Galal</title>
+<html lang="en" data-theme="dark">
 
-    <!-- Favicons -->
-     <link href="assets/img/user-logo.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
-  
-    <!-- Fonts --> 
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> 
-    <!-- Main CSS File -->
-    <!-- <link rel="stylesheet" href="assets/css/resume.css"> -->
-    <link href="assets/css/main.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Résumé — Khaled Galal, Software Engineer</title>
+  <meta name="description" content="Full résumé for Khaled Galal — Software Engineer in R&D AI Solutions at Intercom Enterprises. Experience, education, technical skills and certifications.">
+  <link href="assets/img/user-logo.png" rel="icon">
+  <link href="assets/css/site.css" rel="stylesheet">
 </head>
+
 <body>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header>
+    <div class="wrap nav">
+      <a href="index.html" class="brand"><span class="dot"></span> Khaled Galal</a>
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Khaled</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
 
+      <div class="nav-right">
+        <button class="btn btn-icon menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <button class="btn btn-icon" id="themeToggle" aria-label="Toggle theme">◐</button>
+        <a class="btn btn-primary" href="assets/cv/Khaled_Galal_Yehia_Software_Engineer_CV.pdf" download>Download PDF</a>
+      </div>
     </div>
   </header>
 
-  <!-- Resume Section -->
-  <section id="resume" class="resume section">
-    <!-- Section Title -->
-    <div class="container section-title">
-      <h2>Resume</h2>
-      <p>Education, certifications, and professional experience in software engineering and AI.</p>
-      <!-- Download CV Button -->
-      <a id="downloadCVBtn" href="assets/cv/Software Engineer - Khaled Galal - CV.pdf" download class="btn btn-primary">
-        <i class="fas fa-download"></i> Download PDF
-      </a>    </div>
-    <!-- End Section Title -->
+  <main>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <h3 class="resume-title">Summary</h3>
-          <div class="resume-item pb-0">
-            <h4>Khaled Galal</h4>
-            <p><em>Software Engineer specializing in backend development, AI solutions, and system integration. Experienced in building enterprise-grade applications with Java/Spring Boot, Python, and TypeScript, with a growing focus on AI-powered automation and document generation.</em></p>
-          </div>
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Master of Science in Software Engineering</h4>
-            <h5>Jun 2025 – Aug 2026</h5>
-            <p><em>Quantic School of Business and Technology, Washington, DC (Online)</em></p>
-            <p>DEAC-accredited program focused on AI-driven software engineering, system design, and modern development practices.</p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor of Computer and Information Science</h4>
-            <h5>2019 - 2023</h5>
-            <p><em>Ain Shams University, Cairo, Egypt</em></p>
-            <p><strong>Graduation Project: Driver Behavior Detection System</strong></p>
-            <ul>
-              <li>Developed using Python with machine learning models like MobileNet, VGG16, and VGG19.</li>
-              <li>System detects and classifies 10 different driver behaviors such as drowsiness and inattention.</li>
-              <li>Built a mobile application using Flutter and a backend server with Flask for real-time monitoring and alerts.</li>
-            </ul>
-          </div>
-          <h3 class="resume-title">Certificates & Training</h3>
-          <div class="resume-item">
-            <h4>Digital Egypt Pioneers Program — Vulnerability Analyst / Penetration Tester</h4>
-            <h5>Nov 2024 – May 2025</h5>
-            <p><em>Ministry of Communications and Information Technology of Egypt</em></p>
-            <p>Infrastructure and Security track covering vulnerability analysis and penetration testing.</p>
-          </div>
-          <div class="resume-item">
-            <h4>McKinsey.org Forward Program</h4>
-            <h5>Dec 2025</h5>
-            <p><em>McKinsey.org</em></p>
-            <p>Problem-solving, communication, adaptability, and building a foundational digital toolkit.</p>
-          </div>
-          <div class="resume-item">
-            <h4>Spring Boot 3</h4>
-            <p><em>Course focused on the Spring Boot framework to enhance backend development skills.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Comprehensive Cybersecurity Bootcamp</h4>
-            <p><em>Intensive bootcamp covering various aspects of cybersecurity.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>RPA Developer Foundation</h4>
-            <p><em>Foundation course for RPA Development focused on automation technologies.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Appian Development</h4>
-            <p><em>Course on Appian development covering business process management solutions.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Front End Diploma</h4>
-            <p><em>Diploma covering front-end development technologies and frameworks.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Cybersecurity Fundamentals Workshop</h4>
-            <p><em>Workshop introducing fundamental concepts in cybersecurity.</em></p>
-          </div>
+    <div class="cv-head">
+      <div class="wrap">
+        <p class="eyebrow">Résumé</p>
+        <h1>Khaled Galal Yehia</h1>
+        <p class="role">Software Engineer — AI Solutions &amp; Backend Development</p>
+        <div class="meta">
+          <span class="chip"><a href="mailto:khaled.galal.yhia@gmail.com">khaled.galal.yhia@gmail.com</a></span>
+          <span class="chip"><a href="tel:+201000159951">+20 100 015 9951</a></span>
+          <span class="chip"><a href="https://www.linkedin.com/in/khaled-galal-yehia" target="_blank" rel="noopener">linkedin.com/in/khaled-galal-yehia</a></span>
+          <span class="chip"><a href="https://github.com/Khalid-Galal" target="_blank" rel="noopener">github.com/Khalid-Galal</a></span>
+          <span class="chip">Nasr City, Cairo, Egypt (UTC+2)</span>
         </div>
+        <p style="color:var(--muted);max-width:78ch;margin:0">
+          Software Engineer specialising in backend development, AI solutions and system integration. Experienced in
+          building enterprise-grade applications with Java/Spring Boot, Python and TypeScript. Currently in the R&amp;D AI
+          Solutions team at Intercom Enterprises, building AI-powered tools and automation that support multiple teams
+          across the company.
+        </p>
+      </div>
+    </div>
 
-        <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Software Engineer, R&D AI Solutions | Intercom Enterprises</h4>
-            <h5>Jan 2025 – Present</h5>
-            <p><em>Supported multiple teams across the company by building AI-powered tools and enterprise applications to automate and streamline their workflows.</em></p>
+    <div class="wrap cv-body">
+
+      <!-- main column -->
+      <div>
+        <div class="cv-block reveal">
+          <h2>Experience</h2>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>Software Engineer, R&amp;D AI Solutions</h3>
+              <span class="when">Jan 2025 — Present</span>
+            </div>
+            <p class="where">Intercom Enterprises · Cairo, Egypt</p>
             <ul>
-              <li><strong>Company-wide:</strong> Designed and developed the Correspondence Management System (CMS), an enterprise modular monolith using Spring Boot 4, Angular 21, PostgreSQL 16, and Flowable workflow engine.</li>
-              <li><strong>Company-wide:</strong> Built a production-ready RAG Agent using Flask, PostgreSQL with pgvector, and Google Generative AI, enabling employees to query company documents such as policies and internal guidelines through a conversational interface.</li>
-              <li><strong>ECM/FileNet & ECM/OpenText Teams:</strong> Developed the ECM Document Generator, a full-stack application (Angular 18 + Node.js/TypeScript) integrating Google Gemini API to automate the creation of technical proposals, taxonomy definitions, and subscription event configurations from analysis documents.</li>
-              <li><strong>ECM/FileNet & ECM/OpenText Teams:</strong> Created an AI-powered Solution Design Document generator using Flask, LangChain, and FAISS-based RAG pipeline to automate ECM solution design from analysis documents.</li>
+              <li><strong>QC Team:</strong> Automated the QC workflow end-to-end with QC Agent (Flask + Angular 21 monorepo, Docker): it generates test case titles from an analysis document using Google Gemini 2.0 Flash and OpenAI GPT-4o with embedding-based de-duplication, elaborates approved titles into detailed steps, then executes each scenario against the real system and records a test video into a central library of all runs.</li>
+              <li><strong>Company-wide:</strong> Designed and developed the Correspondence Management System (CMS), an enterprise modular monolith using Spring Boot 4, Angular 21, PostgreSQL 16 and the Flowable workflow engine.</li>
+              <li><strong>Company-wide:</strong> Built a production-ready RAG Agent using Flask, PostgreSQL with pgvector and Google Generative AI, enabling employees to query company documents such as policies and internal guidelines through a conversational interface.</li>
+              <li><strong>ECM Teams (FileNet &amp; OpenText):</strong> Automated the teams' documentation workflow — a full-stack generator (Angular 18 + Node.js/TypeScript + Google Gemini API) producing technical proposals, taxonomy definitions and subscription event configurations, plus a Flask/LangChain FAISS-based RAG pipeline that drafts solution design documents, all from the same analysis documents.</li>
               <li><strong>Financial Team:</strong> Built a bilingual (Arabic/English) document generator desktop application with Python and Tkinter to automate the generation of financial proposals.</li>
               <li><strong>Support Team:</strong> Developed a multi-layer log filtering system in TypeScript to help first-layer support engineers investigate issues by isolating relevant entries from bank-submitted logs.</li>
             </ul>
           </div>
-          <div class="resume-item">
-            <h4>Back End Developer and Support | Intercom Enterprises</h4>
-            <h5>June 2024 – Dec 2024</h5>
-            <p><em>Supported multiple banking projects, ensuring the stability and performance of critical systems for various banks, including The United Bank, Banque du Caire, and others.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Back End Developer | Intercom Enterprises</h4>
-            <h5>Oct 2023 – Dec 2023 (Full-time)</h5>
-            <p><em>Contributed to the United Bank project by working on front-end responsibilities and back-end development using Struts, including developing an instant payment process that significantly improved transaction speed.</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Digital Integration Trainee | Intercom Enterprises</h4>
-            <h5>Aug 2023 – Sep 2023 (Internship, Hybrid)</h5>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>Back End Developer and Support</h3>
+              <span class="when">Jun 2024 — Dec 2024</span>
+            </div>
+            <p class="where">Intercom Enterprises · Cairo, Egypt</p>
             <ul>
-              <li>Developed a fully functional CRUD demo for an online bookstore, demonstrating advanced integration capabilities.</li>
-              <li>Created a comprehensive MVC demo focused on student data management.</li>
-              <li>Integrated with OpenText for efficient document retrieval.</li>
-              <li>Led the development of a Blood System API with IBM API Connect for a government project, ensuring accurate ID validations.</li>
+              <li>Supported multiple banking projects including contributions to The United Bank, Banque du Caire, Arab International Bank and Housing and Development Bank.</li>
+              <li>Provided back-end development and support, ensuring the stability and performance of critical banking systems.</li>
             </ul>
           </div>
-          <div class="resume-item">
-            <h4>RPA Developer Trainee | Intercom Enterprises</h4>
-            <h5>Jul 2022 – Sep 2022</h5>
-            <p><em>Gained experience in Robotic Process Automation (RPA), automating back-office tasks to improve efficiency.</em></p>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>Back End Developer</h3>
+              <span class="when">Oct 2023 — Dec 2023</span>
+            </div>
+            <p class="where">Intercom Enterprises · Cairo, Egypt · Full-time</p>
+            <ul>
+              <li>Worked on the United Bank project, managing both front-end and back-end roles.</li>
+              <li>Improved transaction speed by developing an instant payment process using Struts 2.</li>
+            </ul>
           </div>
-          <div class="resume-item">
-            <h4>BPM Developer Trainee | Intercom Enterprises</h4>
-            <h5>Feb 2022 – Mar 2022</h5>
-            <p><em>Worked on Business Process Management (BPM), focusing on modeling, automation, and optimization of business processes to support enterprise goals.</em></p>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>Digital Integration Trainee</h3>
+              <span class="when">Aug 2023 — Sep 2023</span>
+            </div>
+            <p class="where">Intercom Enterprises · Cairo, Egypt · Internship, hybrid</p>
+            <ul>
+              <li>Led the development of a Blood System API with IBM API Connect for a government project, ensuring accurate ID validations.</li>
+              <li>Integrated with OpenText for efficient document retrieval.</li>
+              <li>Developed a fully functional CRUD demo for an online bookstore showcasing integration capabilities, and an MVC demo focused on student data management.</li>
+            </ul>
+          </div>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>RPA Developer Trainee</h3>
+              <span class="when">Jul 2022 — Sep 2022</span>
+            </div>
+            <p class="where">Intercom Enterprises · Cairo, Egypt</p>
+            <ul>
+              <li>Worked with automation technologies for robotic process automation tasks — extracting data, filling forms and moving files with UiPath.</li>
+            </ul>
+          </div>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>BPM Developer Trainee</h3>
+              <span class="when">Feb 2022 — Mar 2022</span>
+            </div>
+            <p class="where">Intercom Enterprises · Cairo, Egypt</p>
+            <ul>
+              <li>Car Mechanic Workflow: designed and implemented a streamlined workflow in Appian BPM that checks and retrieves car data, automating the process of sending information to mechanics for repairs.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-block reveal">
+          <h2>Education</h2>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>Master of Science in Software Engineering</h3>
+              <span class="when">Jun 2025 — Aug 2026</span>
+            </div>
+            <p class="where">Quantic School of Business and Technology · Washington, DC (Online)</p>
+            <p>DEAC-accredited program focused on AI-driven software engineering, system design and modern development practices.</p>
+          </div>
+
+          <div class="cv-item">
+            <div class="top">
+              <h3>Bachelor of Computer and Information Science</h3>
+              <span class="when">Sep 2019 — May 2023</span>
+            </div>
+            <p class="where">Ain Shams University · Cairo, Egypt</p>
+            <p><strong style="color:var(--text)">Graduation project — Driver Behavior Detection System.</strong>
+              Built in Python with MobileNet, VGG16 and VGG19 to detect and classify ten driver behaviours such as
+              drowsiness and inattention, paired with a Flutter mobile application and a Flask backend for real-time
+              monitoring and alerts.</p>
           </div>
         </div>
       </div>
+
+      <!-- sidebar -->
+      <aside>
+        <div class="cv-block reveal">
+          <h2>Technical Skills</h2>
+
+          <div class="cv-skill">
+            <h4>Languages</h4>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Java</span><span class="chip">TypeScript</span>
+              <span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">C++</span>
+            </div>
+          </div>
+
+          <div class="cv-skill">
+            <h4>AI &amp; LLM</h4>
+            <div class="chips">
+              <span class="chip">LangChain</span><span class="chip">RAG</span><span class="chip">Google Gemini</span>
+              <span class="chip">OpenAI GPT-4o</span><span class="chip">FAISS</span><span class="chip">pgvector</span>
+              <span class="chip">Embeddings</span><span class="chip">Prompt engineering</span>
+            </div>
+          </div>
+
+          <div class="cv-skill">
+            <h4>Backend</h4>
+            <div class="chips">
+              <span class="chip">Spring Boot</span><span class="chip">Flask</span><span class="chip">Node.js</span>
+              <span class="chip">REST APIs</span><span class="chip">Flowable</span><span class="chip">Struts 2</span>
+            </div>
+          </div>
+
+          <div class="cv-skill">
+            <h4>Frontend</h4>
+            <div class="chips">
+              <span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">SCSS</span>
+              <span class="chip">Flutter</span>
+            </div>
+          </div>
+
+          <div class="cv-skill">
+            <h4>Data</h4>
+            <div class="chips">
+              <span class="chip">PostgreSQL</span><span class="chip">Elasticsearch</span><span class="chip">Redis</span>
+              <span class="chip">SQLite</span>
+            </div>
+          </div>
+
+          <div class="cv-skill">
+            <h4>DevOps &amp; Tools</h4>
+            <div class="chips">
+              <span class="chip">Docker</span><span class="chip">Docker Compose</span><span class="chip">Git</span>
+              <span class="chip">Monorepo (npm/pnpm)</span>
+            </div>
+          </div>
+
+          <div class="cv-skill" style="margin-bottom:0">
+            <h4>Enterprise &amp; Automation</h4>
+            <div class="chips">
+              <span class="chip">IBM API Connect</span><span class="chip">IBM FileNet</span><span class="chip">OpenText</span>
+              <span class="chip">Appian BPM</span><span class="chip">UiPath RPA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-block reveal">
+          <h2>Certifications &amp; Training</h2>
+          <p class="cv-cert"><b>Digital Egypt Pioneers Program</b>Vulnerability Analyst / Penetration Tester —
+            Ministry of Communications and Information Technology of Egypt, Infrastructure and Security track.
+            Nov 2024 – May 2025.</p>
+          <p class="cv-cert"><b>McKinsey.org Forward Program</b>Problem-solving, communication, adaptability and
+            building a foundational digital toolkit. Dec 2025.</p>
+          <p class="cv-cert"><b>Spring Boot 3</b>Course focused on the Spring Boot framework to deepen backend
+            development skills.</p>
+          <p class="cv-cert"><b>Comprehensive Cybersecurity Bootcamp</b>Intensive bootcamp covering various aspects
+            of cybersecurity.</p>
+          <p class="cv-cert"><b>RPA Developer Foundation</b>Foundation course for RPA development focused on
+            automation technologies.</p>
+          <p class="cv-cert"><b>Appian Development</b>Course on Appian development covering business process
+            management solutions.</p>
+          <p class="cv-cert"><b>Front End Diploma</b>Diploma covering front-end development technologies and
+            frameworks.</p>
+          <p class="cv-cert" style="margin-bottom:0"><b>Cybersecurity Fundamentals Workshop</b>Workshop introducing
+            fundamental concepts in cybersecurity.</p>
+        </div>
+      </aside>
+
     </div>
-  </section>
-  <!-- /Resume Section -->
+  </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const downloadCVBtn = document.getElementById("downloadCVBtn");
+  <footer>
+    <div class="wrap foot">
+      <span>© <span id="year"></span> Khaled Galal · <a href="index.html" style="color:var(--accent)">Back to portfolio</a></span>
+      <div class="socials">
+        <a href="https://github.com/Khalid-Galal" aria-label="GitHub" target="_blank" rel="noopener">GH</a>
+        <a href="https://www.linkedin.com/in/khaled-galal-yehia" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      </div>
+    </div>
+  </footer>
 
-      downloadCVBtn.addEventListener("click", () => {
-        // Redirect to the CV PDF file
-        window.location.href = "assets/cv/Software Engineer - Khaled Galal - CV.pdf";
-      });
-    });
-  </script>
-    <!-- Vendor JS Files --> 
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/site.js"></script>
 
 </body>
+
 </html>

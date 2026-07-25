@@ -3,298 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khaled Galal Yehia - CV</title>
+  <title>Khaled Galal Yehia - Software Engineer - CV</title>
   <style>
+    /* ATS notes — do not "improve" these away:
+       - single column everywhere; no CSS grid/flex columns, no tables
+       - standard section headings (Professional Summary / Technical Skills /
+         Professional Experience / Education / Certifications)
+       - skills as "Label: comma, separated, list" so any parser reconstructs them
+       - real text only, no icons or images
+       Source of truth for assets/cv/Khaled_Galal_Yehia_Software_Engineer_CV.pdf.
+       Regenerate with: node generate-cv-pdf.js */
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      line-height: 1.4;
-      padding: 20px 40px;
+      font-family: Calibri, Carlito, 'Segoe UI', Tahoma, sans-serif;
+      font-size: 10.5pt;
+      color: #1a1a1a;
+      line-height: 1.32;
       max-width: 900px;
       margin: 0 auto;
     }
-    @media print {
-      body { padding: 15px 35px; }
-    }
 
     /* Header */
-    .header { text-align: center; margin-bottom: 12px; }
-    .header h1 { font-size: 26px; font-weight: 700; letter-spacing: 2px; margin-bottom: 2px; }
-    .header .subtitle { font-size: 16px; color: #555; margin-bottom: 8px; }
-    .header .contact { font-size: 12px; color: #555; }
-    .header .contact a { color: #555; text-decoration: none; }
-    .header .contact span { margin: 0 4px; }
-
-    /* Section */
-    .section { margin-bottom: 10px; }
-    .section-title {
-      font-size: 16px;
-      font-weight: 700;
+    .name {
       text-align: center;
-      border-bottom: 1.5px solid #333;
-      padding-bottom: 3px;
-      margin-bottom: 8px;
+      font-size: 19pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+    .title { text-align: center; font-size: 11pt; margin-bottom: 4px; }
+    .contact { text-align: center; font-size: 10pt; line-height: 1.45; }
+    .contact a { color: #1a1a1a; text-decoration: none; }
+
+    /* Sections */
+    h2 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      border-bottom: 1px solid #1a1a1a;
+      padding-bottom: 2px;
+      margin: 11px 0 6px;
     }
 
-    /* Experience / Education items */
-    .item { margin-bottom: 10px; }
-    .item-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .item-header .company { font-size: 15px; font-weight: 600; }
-    .item-header .location { font-size: 13px; color: #555; }
-    .item-role { display: flex; justify-content: space-between; align-items: baseline; }
-    .item-role .role { font-size: 14px; font-weight: 700; }
-    .item-role .dates { font-size: 13px; color: #555; }
-    .item-desc { font-size: 13px; color: #555; font-style: italic; margin: 2px 0 4px 0; }
-    .item ul { margin-left: 20px; font-size: 13px; }
-    .item li { margin-bottom: 1px; }
-    .item li strong { font-weight: 700; }
+    p { margin-bottom: 4px; }
+    .summary { text-align: justify; }
 
-    /* Summary */
-    .summary { font-size: 13px; text-align: justify; }
+    /* Skills — one line per category, label then comma-separated list */
+    .skills p { margin-bottom: 3px; }
+    .skills strong { font-weight: 700; }
 
-    /* Strengths grid */
-    .strengths-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
-    }
-    .strength-item h4 { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
-    .strength-item p { font-size: 12px; color: #555; }
+    /* Experience / education entries */
+    .entry { margin-bottom: 8px; }
+    .entry:last-child { margin-bottom: 0; }
+    .job { font-weight: 700; font-size: 10.5pt; }
+    .org { font-style: italic; font-size: 10pt; margin-bottom: 2px; }
 
-    /* Training */
-    .training-item { font-size: 12px; margin-bottom: 4px; }
-    .training-item strong { font-weight: 700; }
-    .training-item span { color: #555; }
+    ul { margin: 0 0 0 17px; }
+    li { margin-bottom: 2px; }
 
-    /* Projects */
-    .project { margin-bottom: 8px; }
-    .project-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .project-header .project-name { font-size: 14px; font-weight: 700; text-decoration: underline; }
-    .project-header .project-dates { font-size: 13px; color: #555; }
-    .project-desc { font-size: 13px; color: #555; margin: 2px 0 4px 0; }
-    .project ul { margin-left: 20px; font-size: 13px; }
-    .project li { margin-bottom: 2px; }
-
-    /* Skills tags */
-    .skills-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-    .skills-tags span {
-      font-size: 12px;
-      background: #e8e8e8;
-      padding: 2px 10px;
-      border-radius: 10px;
+    @media print {
+      body { max-width: none; }
+      h2 { page-break-after: avoid; }
+      .entry { page-break-inside: avoid; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="header">
-    <h1>KHALED GALAL YEHIA</h1>
-    <div class="subtitle">Software Engineer</div>
-    <div class="contact">
-      +201000159951 <span>&bull;</span>
-      <a href="mailto:khaled.galal.yhia@gmail.com">khaled.galal.yhia@gmail.com</a> <span>&bull;</span>
-      <a href="https://www.linkedin.com/in/khaled-galal-yehia/">linkedin.com/in/khaled-galal-yehia</a>
-      <br>
-      <a href="https://khalid-galal.github.io/khaled-portfolio/">khalid-galal.github.io/khaled-portfolio</a> <span>&bull;</span>
-      Nasr City, Cairo, Egypt
-    </div>
+  <div class="name">KHALED GALAL YEHIA</div>
+  <div class="title">Software Engineer | Backend Development &amp; AI Solutions</div>
+  <div class="contact">
+    Nasr City, Cairo, Egypt | +20 100 015 9951 | <a href="mailto:khaled.galal.yhia@gmail.com">khaled.galal.yhia@gmail.com</a><br>
+    <a href="https://www.linkedin.com/in/khaled-galal-yehia/">linkedin.com/in/khaled-galal-yehia</a> |
+    <a href="https://khalid-galal.github.io/khaled-portfolio/">khalid-galal.github.io/khaled-portfolio</a>
   </div>
 
-  <!-- Summary -->
-  <div class="section">
-    <div class="section-title">Summary</div>
-    <p class="summary">
-      Software Engineer specializing in backend development, AI solutions, and system integration. Experienced in building enterprise-grade
-      applications with Java/Spring Boot, Python, and TypeScript. Currently working in the R&D AI Solutions team at Intercom Enterprises,
-      building AI-powered tools and automation solutions that support multiple teams across the company.
-    </p>
+  <h2>Professional Summary</h2>
+  <p class="summary">
+    Software Engineer with 3+ years of experience delivering enterprise-grade backend systems and AI-powered
+    applications for banking and enterprise clients. Specialized in Java/Spring Boot, Python, and TypeScript, with
+    hands-on delivery of Retrieval-Augmented Generation (RAG) pipelines, Large Language Model (LLM) integrations,
+    REST API design, and workflow automation. Currently a member of the R&amp;D AI Solutions team at Intercom
+    Enterprises, building production tools adopted by QC, ECM, Finance, and Support teams company-wide. Pursuing an
+    M.Sc. in Software Engineering.
+  </p>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><strong>Programming Languages:</strong> Java, Python, TypeScript, JavaScript, SQL, C++</p>
+    <p><strong>Backend Development:</strong> Spring Boot, Flask, Node.js, Struts 2, REST API Design, Microservices, Modular Monolith Architecture, System Integration</p>
+    <p><strong>Frontend Development:</strong> Angular, TypeScript, JavaScript, HTML5, CSS3</p>
+    <p><strong>AI &amp; Machine Learning:</strong> Large Language Models (LLM), Retrieval-Augmented Generation (RAG), LangChain, Google Gemini, OpenAI GPT-4o, FAISS, pgvector, Vector Embeddings, Prompt Engineering, Machine Learning Models</p>
+    <p><strong>Databases &amp; Data Stores:</strong> PostgreSQL, Elasticsearch, Redis, pgvector, Vector Databases</p>
+    <p><strong>DevOps &amp; Tools:</strong> Docker, Git, Containerization, Monorepo Architecture</p>
+    <p><strong>Enterprise Platforms:</strong> Flowable Workflow Engine, Appian BPM, UiPath Studio (RPA), IBM API Connect, IBM FileNet, OpenText ECM</p>
   </div>
 
-  <!-- Experience -->
-  <div class="section">
-    <div class="section-title">Experience</div>
+  <h2>Professional Experience</h2>
 
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Intercom Enterprises</span>
-        <span class="location">Cairo, Egypt</span>
-      </div>
-      <div class="item-role">
-        <span class="role">Software Engineer, R&D AI Solutions</span>
-        <span class="dates">01/2025 - present</span>
-      </div>
-      <p class="item-desc">Supported multiple teams across the company by building AI-powered tools and enterprise applications to automate and streamline their workflows.</p>
-      <ul>
-        <li><strong>Company-wide:</strong> Designed and developed the Correspondence Management System (CMS), an enterprise modular monolith using Spring Boot 4, Angular 21, PostgreSQL 16, and Flowable workflow engine.</li>
-        <li><strong>Company-wide:</strong> Built a production-ready RAG Agent using Flask, PostgreSQL with pgvector, and Google Generative AI, enabling employees to query company documents such as policies and internal guidelines through a conversational interface.</li>
-        <li><strong>ECM/FileNet & ECM/OpenText Teams:</strong> Developed the ECM Document Generator, a full-stack application (Angular 18 + Node.js/TypeScript) integrating Google Gemini API to automate the creation of technical proposals, taxonomy definitions, and subscription event configurations from analysis documents.</li>
-        <li><strong>ECM/FileNet & ECM/OpenText Teams:</strong> Created an AI-powered Solution Design Document generator using Flask, LangChain, and FAISS-based RAG pipeline to automate ECM solution design from analysis documents.</li>
-        <li><strong>Financial Team:</strong> Built a bilingual (Arabic/English) document generator desktop application with Python and Tkinter to automate the generation of financial proposals.</li>
-        <li><strong>Support Team:</strong> Developed a multi-layer log filtering system in TypeScript to help first-layer support engineers investigate issues by isolating relevant entries from bank-submitted logs.</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Intercom Enterprises</span>
-        <span class="location">Cairo, Egypt</span>
-      </div>
-      <div class="item-role">
-        <span class="role">Back End Developer and Support</span>
-        <span class="dates">06/2024 - 12/2024</span>
-      </div>
-      <p class="item-desc">Supported multiple banking projects, ensuring the stability and performance of critical systems.</p>
-      <ul>
-        <li>Supported multiple banking projects including contributions to the United Bank, Banque du Caire, Arab International Bank, and Housing and Development Bank.</li>
-        <li>Provided back-end development and support, ensuring the stability and performance of critical banking systems.</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Intercom Enterprises</span>
-        <span class="location">Cairo, Egypt</span>
-      </div>
-      <div class="item-role">
-        <span class="role">Back End Developer</span>
-        <span class="dates">10/2023 - 12/2023</span>
-      </div>
-      <p class="item-desc">Full-time position focusing on backend development for banking systems.</p>
-      <ul>
-        <li>Worked on the United Bank project, managing both front-end and back-end roles.</li>
-        <li>Improved transaction speed by developing an instant payment process using Struts 2.</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Intercom Enterprises</span>
-        <span class="location">Cairo, Egypt</span>
-      </div>
-      <div class="item-role">
-        <span class="role">Digital Integration Trainee</span>
-        <span class="dates">08/2023 - 09/2023</span>
-      </div>
-      <p class="item-desc">Internship focusing on digital integration projects.</p>
-      <ul>
-        <li>Developed a fully functional CRUD demo for an online bookstore showcasing integration capabilities.</li>
-        <li>Created an MVC demo focused on student data management.</li>
-        <li>Integrated with OpenText for efficient document retrieval.</li>
-        <li>Led the development of a Blood System API with IBM API Connect ensuring accurate ID validations.</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Intercom Enterprises</span>
-        <span class="location">Cairo, Egypt</span>
-      </div>
-      <div class="item-role">
-        <span class="role">RPA Developer Trainee</span>
-        <span class="dates">07/2022 - 09/2022</span>
-      </div>
-      <p class="item-desc">Trainee role focused on robotic process automation.</p>
-      <ul>
-        <li>Worked with automation technologies for robotic process automation tasks.</li>
-        <li>Extracted data, filled forms, and moved files using RPA.</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Intercom Enterprises</span>
-        <span class="location">Cairo, Egypt</span>
-      </div>
-      <div class="item-role">
-        <span class="role">BPM Developer Trainee</span>
-        <span class="dates">02/2022 - 03/2022</span>
-      </div>
-      <p class="item-desc">Trainee role focused on business process management development.</p>
-      <ul>
-        <li>Car Mechanic Workflow: Designed and implemented a streamlined workflow in Appian BPM that efficiently checks and retrieves car data, automating the process of sending necessary information to mechanics for repairs.</li>
-      </ul>
-    </div>
+  <div class="entry">
+    <div class="job">Software Engineer, R&amp;D AI Solutions</div>
+    <div class="org">Intercom Enterprises | Cairo, Egypt | 01/2025 - Present</div>
+    <ul>
+      <li>Build AI-powered tools and enterprise applications that automate and streamline workflows for QC, ECM, Finance, and Support teams across the company.</li>
+      <li>Automated the end-to-end QC workflow by developing QC Agent, a Flask and Angular monorepo deployed with Docker that generates test case titles from analysis documents using Google Gemini 2.0 Flash and OpenAI GPT-4o, applies embedding-based de-duplication, expands approved titles into detailed test steps, executes each scenario against the live system, and records test videos into a centralized run library.</li>
+      <li>Designed and developed the Correspondence Management System (CMS), an enterprise modular monolith built with Spring Boot 4, Angular 21, PostgreSQL 16, and the Flowable workflow engine, digitizing company-wide correspondence processes.</li>
+      <li>Delivered a production-ready Retrieval-Augmented Generation (RAG) agent using Flask, PostgreSQL with pgvector, and Google Generative AI, enabling employees to query internal policies and guidelines through a conversational interface.</li>
+      <li>Automated technical documentation for the FileNet and OpenText ECM teams with a full-stack generator (Angular 18, Node.js, TypeScript, Google Gemini API) producing technical proposals, taxonomy definitions, and subscription event configurations, plus a Flask and LangChain FAISS-based RAG pipeline that drafts solution design documents from the same source analysis.</li>
+      <li>Developed a bilingual (Arabic/English) desktop application in Python and Tkinter that automates the generation of financial proposals for the Finance team.</li>
+      <li>Engineered a multi-layer log filtering system in TypeScript that isolates relevant entries from bank-submitted logs, accelerating issue investigation for first-line support engineers.</li>
+    </ul>
   </div>
 
-  <!-- Education -->
-  <div class="section">
-    <div class="section-title">Education</div>
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Quantic School of Business and Technology</span>
-        <span class="location">Washington, DC (Online)</span>
-      </div>
-      <div class="item-role">
-        <span class="role">Master of Science in Software Engineering</span>
-        <span class="dates">06/2025 - 08/2026</span>
-      </div>
-      <p class="item-desc">DEAC-accredited program focused on AI-driven software engineering, system design, and modern development practices.</p>
-    </div>
-    <div class="item">
-      <div class="item-header">
-        <span class="company">Ain Shams University</span>
-        <span class="location">Cairo, Egypt</span>
-      </div>
-      <div class="item-role">
-        <span class="role">Bachelor of Computer and Information Science</span>
-        <span class="dates">09/2019 - 05/2023</span>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-role">
-        <span class="role">Graduation Project</span>
-        <span class="dates">01/2023 - 06/2023</span>
-      </div>
-      <p class="item-desc">Successfully developed a Driver Behavior Detection System showcasing my ability to implement advanced technologies and machine learning models.</p>
-    </div>
+  <div class="entry">
+    <div class="job">Backend Developer &amp; Technical Support</div>
+    <div class="org">Intercom Enterprises | Cairo, Egypt | 06/2024 - 12/2024</div>
+    <ul>
+      <li>Delivered backend development and production support across banking projects for United Bank, Banque du Caire, Arab International Bank, and Housing and Development Bank.</li>
+      <li>Diagnosed and resolved production defects in mission-critical banking systems, maintaining the stability, performance, and availability of live customer-facing services.</li>
+    </ul>
   </div>
 
-  <!-- Strengths -->
-  <div class="section">
-    <div class="section-title">Strengths</div>
-    <div class="strengths-grid">
-      <div class="strength-item">
-        <h4>AI & LLM Development</h4>
-        <p>Building AI solutions with LangChain, RAG pipelines, Google Gemini, FAISS, and pgvector.</p>
-      </div>
-      <div class="strength-item">
-        <h4>Back-End Development</h4>
-        <p>Experience in back-end development using Spring Boot, Flask, Node.js, and Struts.</p>
-      </div>
-      <div class="strength-item">
-        <h4>Full-Stack Development</h4>
-        <p>Building end-to-end applications with Angular, TypeScript, and Node.js frontends paired with robust backends.</p>
-      </div>
-      <div class="strength-item">
-        <h4>Programming Skills</h4>
-        <p>Strong programming skills in Python, Java, TypeScript, JavaScript, and C++.</p>
-      </div>
-      <div class="strength-item">
-        <h4>BPM & RPA Development</h4>
-        <p>Capable of working on business process management (Appian BPM) and robotic process automation (UiPath Studio).</p>
-      </div>
-      <div class="strength-item">
-        <h4>Other Technical Strengths</h4>
-        <p>API design and integration, Docker, PostgreSQL, Elasticsearch, Redis, Git.</p>
-      </div>
-    </div>
+  <div class="entry">
+    <div class="job">Backend Developer</div>
+    <div class="org">Intercom Enterprises | Cairo, Egypt | 10/2023 - 12/2023</div>
+    <ul>
+      <li>Developed backend services for the United Bank project while also contributing to front-end delivery, covering the full application stack.</li>
+      <li>Improved transaction processing speed by implementing an instant payment process using Struts 2.</li>
+    </ul>
   </div>
 
-  <!-- Certificates & Training -->
-  <div class="section">
-    <div class="section-title">Certificates & Training</div>
-    <div class="training-item"><strong>Digital Egypt Pioneers Program — Vulnerability Analyst / Penetration Tester</strong> <span>&mdash; Ministry of Communications and Information Technology of Egypt (Infrastructure and Security). Nov 2024 - May 2025.</span></div>
-    <div class="training-item"><strong>McKinsey.org Forward Program</strong> <span>&mdash; Practical skills for problem-solving, communication, adaptability, and building a digital toolkit. Dec 2025.</span></div>
-    <div class="training-item"><strong>Spring Boot 3</strong> <span>&mdash; Course focused on the Spring Boot framework to enhance backend development skills.</span></div>
-    <div class="training-item"><strong>Comprehensive Cybersecurity Bootcamp</strong> <span>&mdash; Intensive bootcamp covering various aspects of cybersecurity.</span></div>
-    <div class="training-item"><strong>RPA Developer Foundation</strong> <span>&mdash; Foundation course for RPA Development focused on automation technologies.</span></div>
-    <div class="training-item"><strong>Appian Development</strong> <span>&mdash; Course on Appian development covering business process management solutions.</span></div>
-    <div class="training-item"><strong>Front End Diploma</strong> <span>&mdash; Diploma covering front-end development technologies and frameworks.</span></div>
-    <div class="training-item"><strong>Cybersecurity Fundamentals Workshop</strong> <span>&mdash; Workshop introducing fundamental concepts in cybersecurity.</span></div>
+  <div class="entry">
+    <div class="job">Digital Integration Trainee</div>
+    <div class="org">Intercom Enterprises | Cairo, Egypt | 08/2023 - 09/2023</div>
+    <ul>
+      <li>Led development of a Blood System API on IBM API Connect, implementing accurate national ID validation rules.</li>
+      <li>Built CRUD and MVC demo applications (online bookstore, student data management) and integrated OpenText for efficient document retrieval.</li>
+    </ul>
   </div>
 
+  <div class="entry">
+    <div class="job">RPA Developer Trainee</div>
+    <div class="org">Intercom Enterprises | Cairo, Egypt | 07/2022 - 09/2022</div>
+    <ul>
+      <li>Automated data extraction, form filling, and file transfer tasks using Robotic Process Automation (RPA) tooling.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="job">BPM Developer Trainee</div>
+    <div class="org">Intercom Enterprises | Cairo, Egypt | 02/2022 - 03/2022</div>
+    <ul>
+      <li>Designed and implemented a car mechanic workflow in Appian BPM that retrieves vehicle data and automatically routes repair information to mechanics.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="job">Master of Science in Software Engineering</div>
+    <div class="org">Quantic School of Business and Technology | Washington, DC (Online) | 06/2025 - 08/2026 (Expected)</div>
+    <ul>
+      <li>DEAC-accredited program focused on AI-driven software engineering, system design, and modern development practices.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="job">Bachelor of Science in Computer and Information Science</div>
+    <div class="org">Ain Shams University | Cairo, Egypt | 09/2019 - 05/2023</div>
+    <ul>
+      <li>Graduation Project: Driver Behavior Detection System - designed and trained machine learning models to detect and classify unsafe driving behavior.</li>
+    </ul>
+  </div>
+
+  <h2>Certifications &amp; Training</h2>
+  <ul>
+    <li>Digital Egypt Pioneers Program (DEPI) - Vulnerability Analyst / Penetration Tester, Ministry of Communications and Information Technology, Egypt (Infrastructure and Security), 11/2024 - 05/2025</li>
+    <li>McKinsey.org Forward Program - problem solving, communication, adaptability, and digital toolkit, 12/2025</li>
+    <li>Spring Boot 3 - backend development with the Spring Boot framework</li>
+    <li>Comprehensive Cybersecurity Bootcamp</li>
+    <li>RPA Developer Foundation (UiPath) | Appian Development (BPM)</li>
+    <li>Front End Development Diploma | Cybersecurity Fundamentals Workshop</li>
+  </ul>
 
 </body>
 </html>

@@ -29,4 +29,4 @@ There are no build or test commands. To run locally, serve the files with any st
 - To add/edit portfolio projects, modify the JavaScript array in `assets/js/main.js` (around line 267) and add corresponding images to `assets/img/portfolio/`.
 - Contact form fields map to specific Google Form entry IDs — changing form fields requires updating both the HTML and the Google Form entry mapping in `main.js`.
 - External CDN dependencies: Google Fonts (preconnect) and Font Awesome 5.15.4.
-- CV PDF lives at `assets/cv/Software Engineer - Khaled Galal - CV.pdf`.
+- CV PDF lives at `assets/cv/Khaled_Galal_Yehia_Software_Engineer_CV.pdf`.

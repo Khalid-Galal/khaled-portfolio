@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="stuBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121724"/>
+      <stop offset="1" stop-color="#0a0d14"/>
+    </linearGradient>
+    <radialGradient id="stuGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#3ecf8e" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#3ecf8e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="stuGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#161c28" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#stuBg)"/>
+  <rect width="640" height="400" fill="url(#stuGrid)"/>
+  <ellipse cx="320" cy="196" rx="260" ry="176" fill="url(#stuGlow)"/>
+
+  <!-- database -->
+  <path d="M76 122v116a64 22 0 0 0 128 0V122" fill="#151b28" stroke="#3ecf8e" stroke-width="2.5"/>
+  <path d="M76 166a64 22 0 0 0 128 0" fill="none" stroke="#26483c" stroke-width="2"/>
+  <path d="M76 202a64 22 0 0 0 128 0" fill="none" stroke="#26483c" stroke-width="2"/>
+  <ellipse cx="140" cy="122" rx="64" ry="22" fill="#1a2433" stroke="#3ecf8e" stroke-width="2.5"/>
+
+  <!-- link -->
+  <path d="M216 180h56" fill="none" stroke="#2a3345" stroke-width="2.5"/>
+  <path d="M266 172l9 8-9 8" fill="none" stroke="#3c465e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- records table -->
+  <rect x="296" y="98" width="284" height="188" rx="14" fill="#151b28" stroke="#2a3345" stroke-width="2"/>
+  <g fill="#3ecf8e" fill-opacity=".75">
+    <rect x="320" y="124" width="68" height="11" rx="5"/>
+    <rect x="416" y="124" width="56" height="11" rx="5"/>
+    <rect x="500" y="124" width="48" height="11" rx="5"/>
+  </g>
+  <path d="M310 150h256" fill="none" stroke="#232b3a" stroke-width="2"/>
+  <g fill="#263041">
+    <rect x="320" y="172" width="72" height="11" rx="5"/>
+    <rect x="416" y="172" width="60" height="11" rx="5"/>
+    <rect x="500" y="172" width="52" height="11" rx="5"/>
+    <rect x="320" y="240" width="72" height="11" rx="5"/>
+    <rect x="416" y="240" width="60" height="11" rx="5"/>
+    <rect x="500" y="240" width="52" height="11" rx="5"/>
+  </g>
+  <rect x="302" y="198" width="4" height="26" rx="2" fill="#3ecf8e"/>
+  <g fill="#3ecf8e" fill-opacity=".4">
+    <rect x="320" y="206" width="72" height="11" rx="5"/>
+    <rect x="416" y="206" width="60" height="11" rx="5"/>
+    <rect x="500" y="206" width="52" height="11" rx="5"/>
+  </g>
+
+  <text x="296" y="334" font-family="Consolas, ui-monospace, monospace" font-size="19" fill="#3c465e"><tspan fill="#3ecf8e">GET</tspan> POST PUT DELETE</text>
+</svg>
