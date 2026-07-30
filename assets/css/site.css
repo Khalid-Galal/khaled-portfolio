@@ -196,7 +196,10 @@ section { padding: 88px 0; }
 .cv-head h1 { font-size: clamp(32px, 4.6vw, 46px); font-weight: 700; margin-bottom: 8px; }
 .cv-head .role { font-size: 18px; color: var(--accent); font-weight: 600; margin: 0 0 20px; }
 .cv-head .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
-.cv-body { display: grid; grid-template-columns: 1.9fr 1fr; gap: 56px; padding: 56px 0 88px; align-items: start; }
+/* padding-block only: a `padding` shorthand here would kill .wrap's side
+   padding (same specificity, later rule) and leave the résumé flush to the
+   viewport edges on tablets. */
+.cv-body { display: grid; grid-template-columns: 1.9fr 1fr; gap: 56px; padding-block: 56px 88px; align-items: start; }
 .cv-block { margin-bottom: 44px; }
 .cv-block:last-child { margin-bottom: 0; }
 .cv-block > h2 {
@@ -263,7 +266,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0; }
 /* Phone header: brand + 3 controls do not fit at 360px and under, which
    wrapped "Khaled Galal" onto two lines inside a fixed 66px bar. */
 @media (max-width: 430px) {
-  .wrap { padding: 0 18px; }
+  .wrap { padding-inline: 18px; }  /* inline only — .cv-body sets padding-block */
   .nav-right { gap: 6px; }
   .nav-right .btn { padding: 10px 14px; }
   .btn-icon { width: 36px; height: 36px; padding: 8px; }
